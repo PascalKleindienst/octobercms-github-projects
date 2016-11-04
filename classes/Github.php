@@ -14,7 +14,7 @@ class Github
     /**
      * List public repositories for the specified user
      * GET /users/:username/repos
-     
+     *
      * @param string $username
      * @return stdObj
      */
