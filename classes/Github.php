@@ -42,7 +42,7 @@ class Github
      * @param string $url
      * @return stdObj
      */
-    public function fetch($url)
+    protected function fetch($url)
     {
         // create a new cURL resource
         $ch = curl_init();
