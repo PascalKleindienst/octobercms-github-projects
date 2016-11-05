@@ -11,19 +11,9 @@ use PKleindienst\GithubProjects\Classes\Github;
 class Item extends ComponentBase
 {
     /**
-     * @var string
-     */
-    public $user;
-
-    /**
-     * @var string
-     */
-    public $repo;
-
-    /**
      * @var stdObj
      */
-    public $content;
+    public $repo;
 
     /**
      * @return array
@@ -57,9 +47,6 @@ class Item extends ComponentBase
     public function onRun()
     {
         $gh = new Github();
-        
-        $this->user = $this->page['user'] = $this->property('user');
-        $this->repo = $this->page['repo'] = $this->property('repo');
-        $this->content = $gh->get($this->user, $this->repo);
+        $this->repo = $gh->get($this->property('user'), $this->property('repo'));
     }
 }
