@@ -20,7 +20,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-license]: https://img.shields.io/github/license/PascalKleindienst/octobercms-github-projects.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/PascalKleindienst/octobercms-github-projects/master.svg?style=flat-square
-[ico-hhvm]: https://img.shields.io/hhvm/PascalKleindienst/octobercms-github-projects.svg?style=flat-square
+[ico-hhvm]: https://img.shields.io/hhvm/pkleindienst/octobercms-github-projects.svg?style=flat-square
 [ico-style]: https://styleci.io/repos/72832060/shield?branch=master
 [ico-code-quality]: https://img.shields.io/codeclimate/github/PascalKleindienst/octobercms-github-projects.svg?style=flat-square
 
