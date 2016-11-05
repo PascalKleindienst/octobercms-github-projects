@@ -1,11 +1,19 @@
 <?php namespace PKleindienst\GithubProjects\Classes;
 
+use Cache;
+
 /**
  * Github API Fetcher
  * @package PKleindienst\GithubProjects\Classes
  */
 class Github
 {
+    /**
+     * TTL in minutes
+     * @var int
+     */
+    public static $TTL = 60;
+
     /**
      * @var string
      */
@@ -20,7 +28,11 @@ class Github
      */
     public function repos($username)
     {
-        return $this->fetch("/users/$username/repos");
+        $key = "/users/$username/repos";
+
+        return Cache::remember($key, self::$TTL, function() use ($key) {
+             return $this->fetch($key);
+        });
     }
 
     /**
@@ -32,8 +44,12 @@ class Github
      * @return stdObj
      */
     public function get($owner, $repo)
-    {
-        return $this->fetch("/repos/$owner/$repo");
+    {        
+        $key = "/repos/$owner/$repo";
+
+        return Cache::remember($key, self::$TTL, function() use ($key) {
+             return $this->fetch($key);
+        });
     }
 
     /**
