@@ -12,7 +12,10 @@ engines:
   phpcodesniffer:
     enabled: true
     config:
-    	standard: "PSR1,PSR2"
+      file_extensions: "php,inc,lib"
+      standard: "PSR1,PSR2"
+      ignore_warnings: true
+      encoding: utf-8
 ratings:
   paths:
   - "**.inc"
@@ -20,4 +23,5 @@ ratings:
   - "**.jsx"
   - "**.module"
   - "**.php"
-exclude_paths: ['vendor']
+exclude_paths:
+- "**/vendor/**/*"
