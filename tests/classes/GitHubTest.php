@@ -1,16 +1,16 @@
 <?php namespace PKleindienst\GithubProjects\Tests\Classes;
 
-use PKleindienst\GithubProjects\Classes\GitHub;
+use PKleindienst\GithubProjects\Classes\Github;
 use PluginTestCase;
 
-class GitHubTest extends PluginTestCase
+class GithubTest extends PluginTestCase
 {
     protected $gh;
 
     public function setUp()
     {
         parent::setUp();
-        $this->gh = new GitHub();
+        $this->gh = new Github();
     }
 
     public function testRepos()
