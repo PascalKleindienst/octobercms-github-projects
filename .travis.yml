@@ -27,4 +27,6 @@ before_script:
 script:
     #- vendor/bin/phpcs --standard=psr2 --ignore=*/tests/*,*/vendor/* .
     - ../../../vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-    - ./vendor/bin/test-reporter
+
+after_success:
+  - vendor/bin/test-reporter
