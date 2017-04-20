@@ -20,4 +20,18 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
     </php>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">classes/</directory>
+            <directory suffix=".php">components/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="tap" target="build/report.tap"/>
+        <log type="junit" target="build/report.junit.xml"/>
+        <log type="coverage-html" target="build/coverage" charset="UTF-8" yui="true" highlight="true"/>
+        <log type="coverage-text" target="build/coverage.txt"/>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>
 </phpunit>
