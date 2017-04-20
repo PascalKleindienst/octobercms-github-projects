@@ -24,7 +24,7 @@ class Github
      * GET /users/:username/repos
      *
      * @param string $username
-     * @return stdObj
+     * @return stdObj[]
      */
     public function repos($username)
     {

@@ -16,8 +16,14 @@ matrix:
 sudo: false
 
 before_script:
-    - travis_retry composer self-update
-    - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+    - git clone https://github.com/octobercms/october.git
+    - mkdir -p ./october/plugins/pkleindienst/githubprojects
+    - mv !(october) october/plugins/pkleindienst/githubprojects
+    - cd october
+    - travis_retry composer install --no-interaction --prefer-source
+    - cd plugins/pkleindienst/githubprojects
+    - composer install
 
 script:
-    - vendor/bin/phpcs --standard=psr2 --ignore=*/tests/*,*/vendor/* .
+    #- vendor/bin/phpcs --standard=psr2 --ignore=*/tests/*,*/vendor/* .
+    - ../../../vendor/bin/phpunit --coverage-clover build/logs/clover.xml
