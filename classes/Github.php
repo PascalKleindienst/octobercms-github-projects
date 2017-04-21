@@ -55,8 +55,8 @@ class Github
      */
     protected function fetchCache($key)
     {
-        return Cache::remember($key, self::$TTL, function() use ($key) {
-             return $this->fetch($key);
+        return Cache::remember($key, self::$TTL, function () use ($key) {
+            return $this->fetch($key);
         });
     }
 

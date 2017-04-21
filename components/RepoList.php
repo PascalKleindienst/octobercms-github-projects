@@ -8,7 +8,7 @@ use PKleindienst\GithubProjects\Classes\Github;
  * @package PKleindienst\GithubProjects\Components
  */
 class RepoList extends ComponentBase
-{   
+{
     /**
      * @var stdObj[]
      */
@@ -30,7 +30,7 @@ class RepoList extends ComponentBase
      */
     public function defineProperties()
     {
-         return [
+        return [
             'user'      => [
                 'title' => 'User',
             ],
