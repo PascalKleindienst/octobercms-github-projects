@@ -3,7 +3,7 @@
 use PKleindienst\GithubProjects\Classes\Github;
 use PluginTestCase;
 
-class GithubTest extends PluginTestCase
+class GitHubTest extends PluginTestCase
 {
     protected $gh;
 

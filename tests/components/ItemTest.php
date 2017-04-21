@@ -56,11 +56,11 @@ class ItemTest extends PluginTestCase
         $mock = $this->getMock(Item::class, ['getGithub'], [], '', false);
         $mock->expects($this->once())
             ->method('getGithub')
-            ->will($this->returnCallback(function(){
+            ->will($this->returnCallback(function () {
                 $ghMock =  $this->getMock(Github::class, ['get'], [], '', false);
                 $ghMock->expects($this->once())
                     ->method('get')
-                    ->will($this->returnCallback(function(){
+                    ->will($this->returnCallback(function () {
                         return new \stdClass();
                     }));
 
