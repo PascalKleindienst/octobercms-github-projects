@@ -25,6 +25,7 @@
         <whitelist>
             <directory suffix=".php">classes/</directory>
             <directory suffix=".php">components/</directory>
+            <directory suffix=".php">/</directory>
         </whitelist>
     </filter>
     <logging>
