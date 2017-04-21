@@ -15,7 +15,7 @@ class GithubTest extends PluginTestCase
 
     public function testRepos()
     {
-        $repos = $this->gh->repos('octobercms');
+        $repos = $this->gh->repos('octobercms', null, null, null);
         $this->assertTrue(is_array($repos));
         $this->assertGreaterThanOrEqual(1, count($repos));
     }
@@ -25,7 +25,7 @@ class GithubTest extends PluginTestCase
      */
     public function testReposProps()
     {
-        $repos = $this->gh->repos('octobercms');
+        $repos = $this->gh->repos('octobercms', null, null, null);
         $this->assertObjectHasAttribute('owner', $repos[0]);
         $this->assertObjectHasAttribute('html_url', $repos[0]);
         $this->assertObjectHasAttribute('stargazers_count', $repos[0]);

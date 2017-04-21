@@ -12,7 +12,7 @@ class Github
      * TTL in minutes
      * @var int
      */
-    public static $TTL = 60;
+    public static $TTL = -60;
 
     /**
      * @var string
@@ -24,15 +24,14 @@ class Github
      * GET /users/:username/repos
      *
      * @param string $username
+     * @param string|null $type
+     * @param string|null $sort
+     * @param string|null $direction
      * @return stdObj[]
      */
-    public function repos($username)
+    public function repos($username, $type, $sort, $direction)
     {
-        $key = "/users/$username/repos";
-
-        return Cache::remember($key, self::$TTL, function() use ($key) {
-             return $this->fetch($key);
-        });
+        return $this->fetchCache("/users/$username/repos?" . http_build_query(['type' => $type, 'sort' => $sort, 'direction' => $direction]));
     }
 
     /**
@@ -44,9 +43,18 @@ class Github
      * @return stdObj
      */
     public function get($owner, $repo)
-    {        
-        $key = "/repos/$owner/$repo";
+    {
+        return $this->fetchCache("/repos/$owner/$repo");
+    }
 
+    /**
+     * Fetch API resource from cache or from endpoint
+     *
+     * @param string $key
+     * @return stdObj
+     */
+    protected function fetchCache($key)
+    {
         return Cache::remember($key, self::$TTL, function() use ($key) {
              return $this->fetch($key);
         });
