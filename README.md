@@ -5,6 +5,7 @@
 [![HHVM][ico-hhvm]][link-hhvm]
 [![StyleCI][ico-style]][link-style]
 [![Quality Score][ico-code-quality]][link-code-quality]
+[![Code Coverage][ico-code-coverage]][link-code-coverage]
 
 ## Security
 
@@ -23,10 +24,12 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-hhvm]: https://img.shields.io/hhvm/pkleindienst/octobercms-github-projects.svg?style=flat-square
 [ico-style]: https://styleci.io/repos/72832060/shield?branch=master
 [ico-code-quality]: https://img.shields.io/codeclimate/github/PascalKleindienst/octobercms-github-projects.svg?style=flat-square
+[ico-code-coverage]: https://img.shields.io/codeclimate/coverage/github/PascalKleindienst/octobercms-github-projects.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/atog/octobercms-github-projects
 [link-travis]: https://travis-ci.org/PascalKleindienst/octobercms-github-projects
 [link-hhvm]: http://hhvm.h4cc.de/package/pkleindienst/octobercms-github-projects
 [link-code-quality]: https://codeclimate.com/github/PascalKleindienst/octobercms-github-projects
+[link-code-coverage]: https://codeclimate.com/github/PascalKleindienst/octobercms-github-projects/coverage
 [link-style]: https://styleci.io/repos/72832060
 [link-author]: https://github.com/PascalKleindienst
