@@ -36,7 +36,7 @@ class PluginTest extends PluginTestCase
         $components = $this->plugin->registerComponents();
         $this->assertTrue(is_array($components));
         $this->assertArrayHasKey('PKleindienst\GithubProjects\Components\Item', $components);
-        $this->assertArrayHasKey('PKleindienst\GithubProjects\Components\ProjectList', $components);
+        $this->assertArrayHasKey('PKleindienst\GithubProjects\Components\RepoList', $components);
     }
     
     public function testRegisterMarkupTagsNotEmpty()

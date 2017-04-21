@@ -1,0 +1,5 @@
+{% set list = __SELF__.list %}
+
+{% for repo in list %}
+   {% partial '@repo' repo=repo %}
+{% endfor %}

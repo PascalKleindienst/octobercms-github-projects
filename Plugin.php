@@ -24,8 +24,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'PKleindienst\GithubProjects\Components\Item' => 'ghItem',
-        //     'PKleindienst\GithubProjects\Components\List' => 'ghList'
+            'PKleindienst\GithubProjects\Components\Item'     => 'ghItem',
+            'PKleindienst\GithubProjects\Components\RepoList' => 'ghList'
         ];
     }
 
