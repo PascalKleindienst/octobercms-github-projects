@@ -46,7 +46,15 @@ class Item extends ComponentBase
      */
     public function onRun()
     {
-        $gh = new Github();
-        $this->repo = $gh->get($this->property('user'), $this->property('repo'));
+        $this->repo = $this->getGithub()->get($this->property('user'), $this->property('repo'));
+    }
+
+    /**
+     * Get new Github Instance
+     * @return \PKleindienst\GithubProjects\Classes\Github
+     */
+    public function getGithub()
+    {
+        return new Github();
     }
 }
