@@ -6,19 +6,19 @@
         </div>
         
         <div class="pull-right">
-            <span style="display: inline-block" class="label label-default">
+            <span style="display: inline-block;" class="d-inline-block label label-default" title="{{ 'Stars'|_ }}">
                 <i class="icon icon-star-empty"></i> {{ repo.stargazers_count }}
-            </span>
+            </span> 
             
-            <span style="display: inline-block" class="label label-default">
+            <span style="display: inline-block;" class="d-inline-block label label-default" title="{{ 'Watchers'|_ }}">
                 <i class="icon icon-eye-open"></i> {{ repo.watchers_count }}
-            </span>
+            </span> 
 
-            <span style="display: inline-block" class="label label-default">
+            <span style="display: inline-block;" class="d-inline-block label label-default" title="{{ 'Forks'|_ }}">
                 <i class="icon icon-code-fork"></i> {{ repo.forks }}
-            </span>
+            </span> 
 
-            <span style="display: inline-block" class="label label-primary">{{ repo.language }}</span>
+            {% if repo.language %}<span style="display: inline-block;" class="d-inline-block label label-primary">{{ repo.language }}</span>{% endif %}
         </div>
     </div>
     <div class="panel-body">
