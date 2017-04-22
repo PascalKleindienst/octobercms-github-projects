@@ -1,4 +1,4 @@
-# octobercms-github-projects
+# OctoberCMS GitHub Projects Plugin
 
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
@@ -7,9 +7,48 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Code Coverage][ico-code-coverage]][link-code-coverage]
 
+A plugin which utilizes to GitHub API to show informations about repositories.
+
+---
+
+## Details
+
+This plugin will provide a collection of components to display data about GitHub repositories based on the [GitHub API v3](developer.github.com/v3/repos). 
+
+As time passes more parts like *Projects, Issues or Gists* will be added to this collection of components
+
+---
+
+## Documentation
+
+### RepoList
+List public repositories for the specified user.
+
+#### Parameters
+|     Name    |   Type   |                                                 Description                                                 |
+|:------------|:---------|:------------------------------------------------------------------------------------------------------------|
+| `user`      | `string` | The user whose repositories are displayed                                                                   |
+| `type`      | `string` | The repository type. Can be one of `all, owner, member`. Default: `owner`                                   |
+| `sort`      | `string` | The sorting field. Can be one of `created, updated, pushed, full_name`. Default: `full_name`                |
+| `direction` | `string` | The sort direction. Can be one of `asc` or `desc`. Default: when using `full_name`: `asc`, otherwise `desc` |
+
+### Item
+Get a specific repository
+
+The available variables which can be used in the component view are listed here: [https://developer.github.com/v3/repos/#response-3](
+https://developer.github.com/v3/repos/#response-3)
+
+#### Parameters
+| Name   | Type     | Description                            |
+|:-------|:---------|:---------------------------------------|
+| `user` | `string` | The user whose repository is displayed |
+| `repo` | `string` | The repository name                    |
+
+
+---
 ## Security
 
-If you discover any security related issues, please email pascal.kleindienst@posteo.de instead of using the issue tracker.
+If you discover any security related issues, please email security@pascalkleindienst.de instead of using the issue tracker.
 
 ## Credits
 
