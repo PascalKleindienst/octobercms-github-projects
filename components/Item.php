@@ -21,8 +21,8 @@ class Item extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Github Repository Item',
-            'description' => 'Outputs information about a github repository.'
+            'name'        => 'pkleindienst.githubprojects::lang.item.name',
+            'description' => 'pkleindienst.githubprojects::lang.item.description'
         ];
     }
 
@@ -33,10 +33,12 @@ class Item extends ComponentBase
     {
         return [
             'user' => [
-                'title'   => 'User',
+                'title'       => 'pkleindienst.githubprojects::lang.item.user_title',
+                'description' => 'pkleindienst.githubprojects::lang.item.user_desc'
             ],
             'repo' => [
-                'title'   => 'Repository',
+                'title'       => 'pkleindienst.githubprojects::lang.item.repo_title',
+                'description' => 'pkleindienst.githubprojects::lang.item.repo_desc'
             ]
         ];
     }
