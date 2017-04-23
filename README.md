@@ -12,7 +12,7 @@ A plugin which utilizes to GitHub API to show informations about repositories.
 ---
 
 ## Details
-This plugin will provide a collection of components to display data about GitHub repositories based on the [GitHub API v3](developer.github.com/v3/repos). 
+This plugin will provide a collection of components to display data about GitHub repositories based on the [GitHub API v3](https://developer.github.com/v3/repos/). 
 
 As time passes more parts like *Projects, Issues or Gists* will be added to this collection of components.
 
