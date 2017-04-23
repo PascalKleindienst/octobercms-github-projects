@@ -20,8 +20,8 @@ class RepoList extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Github Repository List',
-            'description' => 'List public repositories for the specified user.'
+            'name'        => 'pkleindienst.githubprojects::lang.list.name',
+            'description' => 'pkleindienst.githubprojects::lang.list.description'
         ];
     }
 
@@ -32,22 +32,38 @@ class RepoList extends ComponentBase
     {
         return [
             'user'      => [
-                'title' => 'User',
+                'title'       => 'pkleindienst.githubprojects::lang.list.user_title',
+                'description' => 'pkleindienst.githubprojects::lang.list.user_desc'
             ],
             'type'      => [
-                'title'       => 'Type',
+                'title'       => 'pkleindienst.githubprojects::lang.list.type_title',
+                'description' => 'pkleindienst.githubprojects::lang.list.type_desc',
                 'type'        => 'dropdown',
-                'options'     => ['all' => 'All', 'owner' => 'Owner', 'member' => 'Member']
+                'options'     => [
+                    'all'    => 'pkleindienst.githubprojects::lang.list.type_opt_all',
+                    'owner'  => 'pkleindienst.githubprojects::lang.list.type_opt_owner',
+                    'member' => 'pkleindienst.githubprojects::lang.list.type_opt_member'
+                ]
             ],
             'sort'      => [
-                'title'       => 'Sorting',
+                'title'       => 'pkleindienst.githubprojects::lang.list.sort_title',
+                'description' => 'pkleindienst.githubprojects::lang.list.sort_desc',
                 'type'        => 'dropdown',
-                'options'     => ['created' => 'Created', 'updated' => 'Updated', 'pushed' => 'Pushed', 'full_name' => 'Full-Name']
+                'options'     => [
+                    'created'   => 'pkleindienst.githubprojects::lang.list.sort_opt_created',
+                    'updated'   => 'pkleindienst.githubprojects::lang.list.sort_opt_updated',
+                    'pushed'    => 'pkleindienst.githubprojects::lang.list.sort_opt_pushed',
+                    'full_name' => 'pkleindienst.githubprojects::lang.list.sort_opt_fullname'
+                ]
             ],
             'direction' => [
-                'title'       => 'Sort Direction',
+                'title'       => 'pkleindienst.githubprojects::lang.list.direction_title',
+                'description' => 'pkleindienst.githubprojects::lang.list.direction_desc',
                 'type'        => 'dropdown',
-                'options'     => ['asc' => 'Ascending', 'desc' => 'Descending']
+                'options'     => [
+                    'asc'  => 'pkleindienst.githubprojects::lang.list.direction_opt_asc',
+                    'desc' => 'pkleindienst.githubprojects::lang.list.direction_opt_desc'
+                ]
             ]
         ];
     }

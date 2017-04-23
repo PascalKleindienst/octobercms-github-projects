@@ -12,8 +12,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Github Projects',
-            'description' => '',
+            'name'        => 'pkleindienst.githubprojects::lang.plugin.name',
+            'description' => 'pkleindienst.githubprojects::lang.plugin.description',
             'author'      => 'Pascal Kleindienst',
         ];
     }
