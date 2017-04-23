@@ -30,7 +30,7 @@ return [
         'sort_opt_pushed'    => 'Pushed',
         'sort_opt_fullname'  => 'Full-Name',
         'direction_title'    => 'Sort Direction',
-        'direction_desc'     => 'The sort direction. Can be one of asc or desc',
+        'direction_desc'     => 'The sort direction. Can either be ascending or descending',
         'direction_opt_asc'  => 'Ascending',
         'direction_opt_desc' => 'Descending'
     ]
