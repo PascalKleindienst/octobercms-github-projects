@@ -17,7 +17,7 @@ class PluginTest extends PluginTestCase
     {
         $details = $this->plugin->pluginDetails();
         $this->assertTrue(is_array($details));
-        $this->assertCount(3, $details);
+        $this->assertGreaterThanOrEqual(3, $details);
     }
 
     /**
