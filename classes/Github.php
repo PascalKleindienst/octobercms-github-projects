@@ -29,9 +29,17 @@ class Github
      * @param string|null $direction
      * @return stdObj[]
      */
-    public function repos($username, $type, $sort, $direction)
+    public function repos($username, $type, $sort, $direction, $page = 1, $per_page = 30)
     {
-        return $this->fetchCache("/users/$username/repos?" . http_build_query(['type' => $type, 'sort' => $sort, 'direction' => $direction]));
+        return $this->fetchCache(
+            "/users/$username/repos?" . http_build_query([
+                'type'      => $type,
+                'sort'      => $sort,
+                'direction' => $direction,
+                'page'      => $page,
+                'per_page'  => $per_page,
+            ])
+        );
     }
 
     /**

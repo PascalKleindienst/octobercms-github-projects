@@ -1,13 +1,12 @@
 <?php namespace PKleindienst\GithubProjects\Components;
 
-use Cms\Classes\ComponentBase;
-use PKleindienst\GithubProjects\Classes\Github;
+use PKleindienst\GithubProjects\Classes\PaginationComponent;
 
 /**
  * Item Component
  * @package PKleindienst\GithubProjects\Components
  */
-class RepoList extends ComponentBase
+class RepoList extends PaginationComponent
 {
     /**
      * @var stdObj[]
@@ -30,7 +29,7 @@ class RepoList extends ComponentBase
      */
     public function defineProperties()
     {
-        return [
+        return $this->paginationProperties([
             'user'      => [
                 'title'       => 'pkleindienst.githubprojects::lang.list.user_title',
                 'description' => 'pkleindienst.githubprojects::lang.list.user_desc'
@@ -65,7 +64,7 @@ class RepoList extends ComponentBase
                     'desc' => 'pkleindienst.githubprojects::lang.list.direction_opt_desc'
                 ]
             ]
-        ];
+        ]);
     }
 
     /**
@@ -73,15 +72,8 @@ class RepoList extends ComponentBase
      */
     public function onRun()
     {
-        $this->list = $this->getGithub()->repos($this->property('user'), $this->property('type'), $this->property('sort'), $this->property('direction'));
-    }
-
-    /**
-     * Get new Github Instance
-     * @return \PKleindienst\GithubProjects\Classes\Github
-     */
-    public function getGithub()
-    {
-        return new Github();
+        $this->list = $this->getGithub()->repos(
+            $this->property('user'), $this->property('type'), $this->property('sort'), $this->property('direction'), $this->property('page'), $this->property('per_page')
+        );
     }
 }

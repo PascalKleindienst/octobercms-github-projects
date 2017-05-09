@@ -2,6 +2,7 @@
 
 use PKleindienst\GithubProjects\Components\RepoList;
 use PKleindienst\GithubProjects\Classes\Github;
+use PKleindienst\GithubProjects\Classes\PaginationComponent;
 use PluginTestCase;
 
 class RepoListTest extends PluginTestCase
@@ -23,6 +24,10 @@ class RepoListTest extends PluginTestCase
     /**
      * Tests
      */
+     public function testIsInstanceOfPaginationComponent()
+    {
+        $this->assertInstanceOf(PaginationComponent::class, $this->repoList);
+    }
     
     public function testComponentsDetails()
     {
@@ -45,11 +50,12 @@ class RepoListTest extends PluginTestCase
     {
         $props = $this->repoList->defineProperties();
         $this->assertTrue(is_array($props));
-        $this->assertCount(4, $props);
         $this->assertArrayHasKey('user', $props);
         $this->assertArrayHasKey('type', $props);
         $this->assertArrayHasKey('sort', $props);
         $this->assertArrayHasKey('direction', $props);
+        $this->assertArrayHasKey('page', $props);
+        $this->assertArrayHasKey('per_page', $props);
     }
 
     /**
@@ -84,10 +90,5 @@ class RepoListTest extends PluginTestCase
         // run Method
         $mock->onRun();
         $this->assertNotEmpty($mock->list);
-    }
-
-    public function testGetGithub()
-    {
-        $this->assertInstanceOf(Github::class, $this->repoList->getGithub());
     }
 }

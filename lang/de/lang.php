@@ -5,6 +5,11 @@ return [
         'name'        => 'Github Projekte',
         'description' => 'Nutzen der GitHub API, um Informationen über Repositories anzuzeigen.'
     ],
+    'pagination' => [
+        'page'     => 'Seite',
+        'per_page' => 'Einträge pro Seite',
+        'group'    => 'Seitennummerierung'
+    ],
     'item' => [
         'name'        => 'Github Repository Item',
         'description' => 'Zeigt Informationen über ein GitHub-Repository an.',

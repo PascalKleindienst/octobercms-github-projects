@@ -1,2 +1,4 @@
 1.0.1: First version of GitHub Projects
 1.1.0: Added transations (en,de)
+1.2.0:
+  - Added pagination to repo list

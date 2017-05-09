@@ -43,8 +43,11 @@ class PluginTest extends PluginTestCase
     {
         $tags = $this->plugin->registerMarkupTags();
         $this->assertTrue(is_array($tags));
-        $this->assertArrayHasKey('filters', $tags);
-        $this->assertArrayHasKey('_', $tags['filters']);
-        $this->assertArrayHasKey('__', $tags['filters']);
+
+        if (!class_exists('RainLab\Translate\Behaviors\TranslatableModel')) {
+            $this->assertArrayHasKey('filters', $tags);
+            $this->assertArrayHasKey('_', $tags['filters']);
+            $this->assertArrayHasKey('__', $tags['filters']);
+        }
     }
 }
