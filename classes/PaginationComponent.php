@@ -1,13 +1,13 @@
 <?php namespace PKleindienst\GithubProjects\Classes;
 
-use Cms\Classes\ComponentBase;
+use PKleindienst\GithubProjects\Classes\Component;
 use PKleindienst\GithubProjects\Classes\Github;
 
 /**
  * Pagination Component
  * @package PKleindienst\GithubProjects\Classes
  */
-abstract class PaginationComponent extends ComponentBase
+abstract class PaginationComponent extends Component
 {
     /**
      * Return Pagination Property array
@@ -27,14 +27,5 @@ abstract class PaginationComponent extends ComponentBase
                 'group' => 'pkleindienst.githubprojects::lang.pagination.group'
             ]
         ];
-    }
-
-    /**
-     * Get new Github Instance
-     * @return \PKleindienst\GithubProjects\Classes\Github
-     */
-    protected function getGithub()
-    {
-        return new Github();
     }
 }
