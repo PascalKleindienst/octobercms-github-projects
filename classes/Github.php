@@ -56,6 +56,23 @@ class Github
     }
 
     /**
+     * Get a public gist
+     * GET /gists/:id/:sha
+     *
+     * @param string $id
+     * @param string $sha
+     * @return stdObj
+     */
+    public function gist($id, $sha=null)
+    {
+        if (is_null($sha)) {
+            return $this->fetchCache("/gists/$id");
+        }
+
+        return $this->fetchCache("/gists/$id/$sha");
+    }
+
+    /**
      * Fetch API resource from cache or from endpoint
      *
      * @param string $key
