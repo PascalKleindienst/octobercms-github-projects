@@ -1,14 +1,12 @@
 <?php namespace PKleindienst\GithubProjects\Components;
 
-use Cms\Classes\ComponentBase;
-use Cms\Classes\Page;
-use PKleindienst\GithubProjects\Classes\Github;
+use PKleindienst\GithubProjects\Classes\Component;
 
 /**
  * Item Component
  * @package PKleindienst\GithubProjects\Components
  */
-class Item extends ComponentBase
+class Item extends Component
 {
     /**
      * @var stdObj
@@ -49,14 +47,5 @@ class Item extends ComponentBase
     public function onRun()
     {
         $this->repo = $this->getGithub()->get($this->property('user'), $this->property('repo'));
-    }
-
-    /**
-     * Get new Github Instance
-     * @return \PKleindienst\GithubProjects\Classes\Github
-     */
-    public function getGithub()
-    {
-        return new Github();
     }
 }
