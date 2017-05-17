@@ -1,0 +1,94 @@
+fields:
+    form_settings.section:
+        label: pkleindienst.githubprojects::lang.settings.section_contact_label
+        type: section
+    
+    include_highlight_js:
+        span: left
+        label: pkleindienst.githubprojects::lang.settings.hightlight_js_label
+        commentAbove: pkleindienst.githubprojects::lang.settings.hightlight_js_comment
+        type: switch
+
+    highlight_js_styles:
+        span: right
+        label: pkleindienst.githubprojects::lang.settings.hightlight_styles_label
+        commentAbove: pkleindienst.githubprojects::lang.settings.hightlight_styles_comment
+        type: dropdown
+        default: default
+        options:
+            agate: Agate
+            androidstudio: AndroidStudio
+            arduino-light: Arduino Light
+            arta: Arta
+            ascetic: Ascetic
+            atelier-cave-dark: Atelier Cave (dark)
+            atelier-cave-light: Atelier Cave (light)
+            atelier-dune-dark: Atelier Dune (dark)
+            atelier-dune-light: Atelier Dune (light)
+            atelier-estuary-dark: Atelier Estuary (dark)
+            atelier-estuary-light: Atelier Estuary (light)
+            atelier-forest-dark: Atelier Forest (dark)
+            atelier-forest-light: Atelier Forest (light)
+            atelier-heath-dark: Atelier Heath (dark)
+            atelier-heath-light: Atelier Heath (light)
+            atelier-lakeside-dark: Atelier Lakeside (dark)
+            atelier-lakeside-light: Atelier Lakeside (light)
+            atelier-plateau-dark: Atelier Plateau (dark)
+            atelier-plateau-light: Atelier Plateau (light)
+            atelier-savanna-dark: Atelier Savanna (dark)
+            atelier-savanna-light: Atelier Savanna (light)
+            atelier-seaside-dark: Atelier Seaside (dark)
+            atelier-seaside-light: Atelier Seaside (light)
+            atelier-sulphurpool-dark: Atelier Sulphurpool (dark)
+            atelier-sulphurpool-light: Atelier Sulphurpool (light)
+            atom-one-dark: Atom One (dark)
+            atom-one-light: Atom One (light)
+            brown-paper: Brown Paper
+            codepen-embed: codepen.io Embed Theme
+            color-brewer: Colorbrewer
+            dark: Dark Theme
+            default: Original Highlight.js Theme
+            darcula: Darcula
+            docco: Docco
+            far: FAR
+            foundation: Foundation 4
+            github-gist: GitHub Gist
+            github: GitHub
+            googlecode: Google Code
+            grayscale: grayscale
+            gruvbox-dark: gruvbox (dark)
+            gruvbox-light: gruvbox (light)
+            hopscotch: hopscotch
+            hybrid: vim-hybrid 
+            idea: Intellij Idea
+            ir-black: IR_Black
+            kimbie.dark: Kimbie (dark)
+            kimbie.light: Kimbie (light)
+            magula: Magula
+            mono-blue: mono-blue
+            monokai-sublime: Monokai Sublime
+            monokai: Monokai
+            obsidian: Obsidian
+            ocean: Ocean Dark Theme
+            paraiso-dark: Paraíso (dark)
+            paraiso-light: Paraíso (light)
+            projoaque: Pojoaque Style
+            purebasic: PureBASIC native IDE style
+            qtcreator_dark: Qt Creator dark color scheme
+            qtcreator_light: Qt Creator light color scheme
+            railscasts: Railscasts-like style
+            rainbow: Style with support for rainbow parens
+            routeros: style for Microtik RouterOS script
+            school-book: School Book style
+            solarized-dark: solarized (dark)
+            solarized-light: solarized (light)
+            sunburst: Sunburst-like style
+            tomorrow-night-blue: Tomorrow Night Blue Theme
+            tomorrow-night-bright: Tomorrow Night Bright Theme
+            tomorrow-night-eighties: Tomorrow Night Eighties Theme
+            tomorrow-night: Tomorrow Night Theme
+            tomorrow: Tomorrow Theme
+            vs: Visual Studio-like style
+            xcode: XCode style
+            xt256: xt256.css
+            zenburn: Zenburn style

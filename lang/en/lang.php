@@ -5,6 +5,14 @@ return [
         'name'        => 'Github Projects',
         'description' => 'Utilize the GitHub API to show informations about repositories.'
     ],
+    'settings' => [
+        'section_contact_label'     => 'Settings',
+        'description'               => 'Manage settings',
+        'hightlight_js_label'       => 'Include Highlight.js',
+        'hightlight_js_comment'     => 'Automatically include hightlight.js or not',
+        'hightlight_styles_label'   => 'Hightlight.js Style',
+        'hightlight_styles_comment' => 'Select a style for the syntax highlighting',
+    ],
     'pagination' => [
         'page'     => 'Page',
         'per_page' => 'Items per Page',
