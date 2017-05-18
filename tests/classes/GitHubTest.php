@@ -59,4 +59,30 @@ class GitHubTest extends PluginTestCase
         $this->assertObjectHasAttribute('homepage', $repo);
         $this->assertObjectHasAttribute('pushed_at', $repo);
     }
+
+    public function testGist()
+    {
+        $gist = $this->gh->gist('22ea758ce864ef1d7127');
+        $this->assertInstanceOf(\stdClass::class, $gist);
+    }
+
+    public function testGistWithSha()
+    {
+        $gist = $this->gh->gist('22ea758ce864ef1d7127', '877e78b5e4bd20c579195c6ad87a34eb851f1708');
+        $this->assertInstanceOf(\stdClass::class, $gist);
+    }
+
+    /**
+     * @dependsOn testGist
+     */
+    public function testGistProps()
+    {
+        $gist = $this->gh->get('octobercms', 'october');
+        $this->assertObjectHasAttribute('owner', $gist);
+        $this->assertObjectHasAttribute('html_url', $gist);
+        $this->assertObjectHasAttribute('description', $gist);
+        $this->assertObjectHasAttribute('files', $gist);
+        $this->assertObjectHasAttribute('updated_at', $gist);
+        $this->assertObjectHasAttribute('truncated', $gist);
+    }
 }
