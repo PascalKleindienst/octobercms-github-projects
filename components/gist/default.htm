@@ -1,0 +1,22 @@
+{% set gist=__SELF__.gist %}
+
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <div class="pull-left">
+            <i class="icon icon-github"></i>
+            <a href="{{ gist.html_url }}">{{ gist.description }}</a> by <a href="{{ gist.owner.html_url }}"><em>{{ gist.owner.login }}</em></a>
+        </div>
+    </div>
+    <div class="panel-body">
+        {% for filename, props in gist.files|cast_to_array %}
+            <p class="filename">{{ filename }}<p>
+            <pre><code class="{{ props.language|lower }}">{{ props.content }}</code></pre>
+        {% endfor %}
+        <footer>            
+            <small class="pull-right">
+                {{ 'Updated:'|_ }} 
+                <time datetime="{{ repo.updated_at }}">{{ repo.updated_at|date("M Y") }}</time>    
+            </small>
+        </footer>
+    </div>
+</div>
