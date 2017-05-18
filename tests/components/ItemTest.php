@@ -2,6 +2,7 @@
 
 use PKleindienst\GithubProjects\Components\Item;
 use PKleindienst\GithubProjects\Classes\Component;
+use PKleindienst\GithubProjects\Classes\Github;
 use PluginTestCase;
 
 class ItemTest extends PluginTestCase
@@ -53,17 +54,16 @@ class ItemTest extends PluginTestCase
     public function testOnRun()
     {
         // mock github dependency
-        $mock = $this->getMock(RepoList::class, ['getGithub'], [], '', false);
+        $mock = $this->getMock(Item::class, ['getGithub'], [], '', false);
         $mock->expects($this->once())
             ->method('getGithub')
             ->will($this->returnCallback(function () {
-                $ghMock =  $this->getMock(Github::class, ['repos'], [], '', false);
+                $ghMock =  $this->getMock(Github::class, ['get'], [], '', false);
                 $ghMock->expects($this->once())
-                    ->method('repos')
+                    ->method('get')
                     ->will($this->returnCallback(function () {
-                        return [new \stdClass()];
+                        return new \stdClass();
                     }));
-
                 return $ghMock;
             }));
 
