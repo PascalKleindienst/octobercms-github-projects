@@ -61,7 +61,7 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
         return [
-            'location' => [
+            'githubprojects' => [
                 'label'       => 'pkleindienst.githubprojects::lang.plugin.name',
                 'description' => 'pkleindienst.githubprojects::lang.settings.description',
                 'icon'        => 'icon-github',
