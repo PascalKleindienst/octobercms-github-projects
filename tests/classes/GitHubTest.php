@@ -77,7 +77,7 @@ class GitHubTest extends PluginTestCase
      */
     public function testGistProps()
     {
-        $gist = $this->gh->get('octobercms', 'october');
+        $gist = $this->gh->gist('22ea758ce864ef1d7127');
         $this->assertObjectHasAttribute('owner', $gist);
         $this->assertObjectHasAttribute('html_url', $gist);
         $this->assertObjectHasAttribute('description', $gist);
