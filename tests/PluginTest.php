@@ -37,6 +37,22 @@ class PluginTest extends PluginTestCase
         $this->assertTrue(is_array($components));
         $this->assertArrayHasKey('PKleindienst\GithubProjects\Components\Item', $components);
         $this->assertArrayHasKey('PKleindienst\GithubProjects\Components\RepoList', $components);
+        $this->assertArrayHasKey('PKleindienst\GithubProjects\Components\Gist', $components);
+    }
+
+    public function testRegisterSettings()
+    {
+        $settings = $this->plugin->registerSettings();
+        $this->assertTrue(is_array($settings));
+        $this->assertArrayHasKey('githubprojects', $settings);
+    }
+
+    public function testCastToArray()
+    {
+        $obj = new \stdClass();
+        $obj->foo = 'bar';
+
+        $this->assertTrue(is_array($this->plugin->castToArray($obj)));
     }
     
     public function testRegisterMarkupTagsNotEmpty()
@@ -48,6 +64,7 @@ class PluginTest extends PluginTestCase
             $this->assertArrayHasKey('filters', $tags);
             $this->assertArrayHasKey('_', $tags['filters']);
             $this->assertArrayHasKey('__', $tags['filters']);
+            $this->assertArrayHasKey('cast_to_array', $tags['filters']);
         }
     }
 }
