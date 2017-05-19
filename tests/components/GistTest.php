@@ -55,7 +55,7 @@ class GistTest extends PluginTestCase
 
     public function testOnRun()
     {
-         // mock github dependency
+        // mock github dependency
         $mock = $this->getMock(Gist::class, ['getGithub'], [], '', false);
         $mock->expects($this->once())
             ->method('getGithub')

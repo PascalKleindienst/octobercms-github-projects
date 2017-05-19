@@ -78,7 +78,7 @@ class Plugin extends PluginBase
      * @param mixed $stdClassObject
      * @return array
      */
-    public function castToArray ($stdClassObject)
+    public function castToArray($stdClassObject)
     {
         return (array)$stdClassObject;
     }
