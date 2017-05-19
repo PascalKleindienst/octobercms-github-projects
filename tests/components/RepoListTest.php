@@ -25,9 +25,9 @@ class RepoListTest extends PluginTestCase
      * Tests
      */
      public function testIsInstanceOfPaginationComponent()
-    {
-        $this->assertInstanceOf(PaginationComponent::class, $this->repoList);
-    }
+     {
+         $this->assertInstanceOf(PaginationComponent::class, $this->repoList);
+     }
     
     public function testComponentsDetails()
     {

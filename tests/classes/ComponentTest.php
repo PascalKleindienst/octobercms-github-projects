@@ -6,7 +6,7 @@ use PKleindienst\GitHubProjects\Tests\PHPUnitUtil;
 use PluginTestCase;
 
 class ComponentTest extends PluginTestCase
-{    
+{
     public function testGetGithub()
     {
         $this->assertInstanceOf(

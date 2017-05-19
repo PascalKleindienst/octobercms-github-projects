@@ -6,7 +6,7 @@ use PKleindienst\GitHubProjects\Tests\PHPUnitUtil;
 use PluginTestCase;
 
 class PaginationComponentTest extends PluginTestCase
-{    
+{
     public function testPaginationProperties()
     {
         $stub = $this->getMockForAbstractClass(PaginationComponent::class);
