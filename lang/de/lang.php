@@ -26,6 +26,14 @@ return [
         'repo_title'  => 'Repository',
         'repo_desc'   => 'Der Repository Name'
     ],
+    'gist' => [
+        'name'        => 'Gist',
+        'description' => 'Zeige eine gist.',
+        'id_title'    => 'ID',
+        'id_desc'     => 'Die ID des gist',
+        'sha_title'   => 'Revision',
+        'sha_desc'    => 'Die Revisions-ID für den gist, falls eine spezifische Version angezeigt werden soll (optional)'
+    ],
     'list' => [
         'name'               => 'Github Repository Liste',
         'description'        => 'Auflisten der öffentlichen Repositories für den angegebenen Benutzer.',
