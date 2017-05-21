@@ -14,7 +14,7 @@ A plugin which utilizes to GitHub API to show informations about repositories.
 ## Details
 This plugin will provide a collection of components to display data about GitHub repositories based on the [GitHub API v3](https://developer.github.com/v3/repos/). 
 
-As time passes more parts like *Projects, Issues or Gists* will be added to this collection of components.
+As time passes more parts like *Projects or Issues* will be added to this collection of components.
 
 ### Requirements
 In order to work the [PHP cURL extension](https://secure.php.net/manual/en/book.curl.php) must be installed and enabled.
@@ -46,7 +46,17 @@ https://developer.github.com/v3/repos/#response-3)
 | `user` | `string` | The user whose repository is displayed |
 | `repo` | `string` | The repository name                    |
 
+### Gist
+Get a specific repository
 
+The available variables which can be used in the component view are listed here: [https://developer.github.com/v3/gists/#get-a-single-gist](
+https://developer.github.com/v3/gists/#get-a-single-gist)
+
+#### Parameters
+| Name   | Type     | Description                            |
+|:-------|:---------|:---------------------------------------|
+| `id`   | `string` | ID of the gist                         |
+| `sha`  | `string` | Get a specific revision of a gist      |
 ---
 
 ## Contributing
